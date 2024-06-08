@@ -6,13 +6,14 @@ import MobileNavMenu from "./MobileNavMenu";
 
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [scrollDirection,setScrollDirection] = useState(true)
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY === 0) {
-        setIsScrolled(false);
+      console.log();
+      
+      if (window.scrollY > window.outerHeight / 2) {
+        setIsScrolled(true); 
       } else {
-        setIsScrolled(true);
+        setIsScrolled(false);
       }
      
     };
@@ -25,7 +26,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className={`fixed left-0 ${scrollDirection ? 'top-0' : 'top-[-100px]'} flex justify-center items-center p-4 w-full text-sm z-50 backdrop-blur-lg md:backdrop-blur-0 ${isScrolled ? 'text-white' : ''}`}>
+    <header className={`fixed left-0 top-0 flex justify-center items-center p-4 w-full text-sm z-50  ${isScrolled ? ' backdrop-blur-lg bg-black/20 text-white' : ''}`}>
       <div className="flex justify-between items-center w-[95%] lg:w-[90%] 2xl:w-[2000px] transition-all duration-300">
         <span className="flex items-center text-xl md:text-3xl space-x-2">
           <span>GO</span> <p className="font-bold">FOOD</p>
