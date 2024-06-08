@@ -12,7 +12,7 @@ export default function MobileNavMenu() {
         <MdMenu />
       </button>
       {isOpen && (
-        <div className="md:hidden absolute right-5 top-16 rounded-lg border-[0.5px] border-black p-5 flex flex-col justify-center space-y-3 bg-white/70">
+        <div className="md:hidden absolute right-5 top-16 rounded-lg border-[0.5px] border-black p-5 flex flex-col justify-center space-y-3 bg-white/70 text-black">
           <Link
             href={"#"}
             className="flex items-center hover:text-white/70 transition duration-200"
