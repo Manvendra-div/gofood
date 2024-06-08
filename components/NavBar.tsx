@@ -10,7 +10,7 @@ export default function NavBar() {
     const handleScroll = () => {
       console.log();
       
-      if (window.scrollY > window.outerHeight / 2) {
+      if (window.scrollY > 0) {
         setIsScrolled(true); 
       } else {
         setIsScrolled(false);
